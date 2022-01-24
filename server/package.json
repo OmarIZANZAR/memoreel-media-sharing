@@ -1,0 +1,23 @@
+{
+  "name": "memoreel",
+  "version": "1.0.0",
+  "description": "memories sharing app",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "author": "omar_iz",
+  "license": "ISC",
+  "dependencies": {
+    "cloudinary": "^1.23.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.11.0"
+  },
+  "devDependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^14.2.0"
+  }
+}

@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.btn {
+    border-radius: 0;
+}
+
+/* HEADER STYLE: */
+.navbar-brand {
+    font-family: 'Yeon Sung', cursive;
+    font-size: 2rem;
+    color: #fff;
+}
+.nav-butn {
+    color: #fff;
+    border: solid 4px #7B018E;
+}
+.nav-butn:hover {
+    color: #fff;
+    background-color: #9000A8;
+    box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, .30);
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .nav-butn {
+        margin-top: 1rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.4rem;
+    }
+
+    .navbar-brand img {
+        width: 70px;
+        height: 40px;
+    }
+}
+
+/* WELCOME STYLE: */
+.home {
+    overflow: hidden;
+}
+
+.myappbg {
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-image: url('./images/bgr.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.overlay {
+    background-color: rgba(0, 0, 0, .30);
+    width: 100%;
+    height: 100%;
+}
+
+.welcome {
+    height: 65vh;
+}
+.welcome-txt {
+    font-family: 'Yeon Sung', cursive;
+    width: 70%;
+    text-align: center;
+    color: #fff;
+}
+
+.loader {
+    background-image: url('./images/memoreel.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: auto;
+    width: 90px;
+    height: 54px;
+    flex: 1;
+    margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .welcome {
+        height: 60vh;
+    }
+    .welcome-txt {
+        width: 80%;
+        font-size: 2rem;
+    }
+}
+
+/* POST STYLE */
+.post {
+    background-color: #fff;
+    height: 500px;
+    max-width: 900px;
+}
+.post-frame {
+    width: 60%;
+    height: 100%;
+    max-height: 550px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.thumb {
+    overflow: hidden;
+}
+.post-media {
+    height: 100%;
+    width: 100%;
+    max-height: 550px;
+    object-fit: cover;
+}
+.post-body { 
+    flex: 1;
+    max-width: 400px;
+}
+.post-body-content {
+    padding-left: 1rem;
+    padding-right: .25rem;
+}
+.post-title {
+    max-height: 50px;
+    overflow-y: hidden;
+}
+.post-message {
+    max-height: 180px;
+    overflow-y: hidden;
+}
+.post-tags {
+    max-height: 70px;
+    overflow-y: hidden;
+}
+.post-creator {}
+.post-date {}
+.post-edit-butn {}
+.post-like-butn {}
+.post-delete-butn {}
+
+@media only screen and (max-width: 900px) {
+    .post {
+        flex-direction: column;
+        height: auto;
+        font-size: 1rem;
+    }
+    .post-frame {
+        width: 100%;
+        height: 60%;
+    }
+    .post-body {
+        max-width: 100%;
+    }
+    .post-body-content {
+        padding-left: .5rem;
+        padding-right: .5rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .post {
+        font-size: 0.9rem;
+    }
+    .post-title {
+        max-height: 35px;
+    }
+    .post-message {
+        max-height: 100px;
+    }
+    .post-tags {
+        max-height: 40px;
+    }
+}
+
+/* form */
+.formpage-title {
+    font-family: 'Yeon Sung', cursive;
+    color: white
+}
+.form-input {
+    border: solid 1px rgba(0,0,0,.1);
+    width: 100%;
+    padding: 0px 10px;
+}
+
+.form-title {
+    height: 40px;
+}
+
+.form-message {
+    height: 160px;
+    resize: none;
+}
+
+.form-tags {
+    height: 60px;
+    resize: none;
+}
+
+.form-creator {
+    height: 25px;
+    flex: 1;
+}
+
+/* progress bar */
+.progress {
+    border-radius: 0;
+    height: 10px;
+}
+
+.progress-bar {
+    background-color: #7B018E;
+}
+
+/* drop zone */
+.drop-zone {
+    width: 50%;
+    height: 50%;
+    border: dashed 7px rgba(202, 202, 202, 0.5);
+    cursor: pointer;
+}
+.drop-zone-text {
+    color: rgba(153, 152, 152, 0.5);
+    margin: 0;
+}
+.drop-zone-text i {
+    font-size: 3rem;
+    margin-top: 1rem;
+}
+
+.media-clear-butn {
+    position: absolute;
+    right: 0;
+    z-index: 2;
+}
+
+.progress {
+    max-width: 900px;
+}
+
+.form-controls {
+    max-width: 900px;
+}
+
+.notValid {
+    border-color: rgba(255, 0, 0, 0.37);
+    border-width: 3px;
+}
+
+.valid {
+    border-color: rgba(0, 128, 0, 0.37);
+    border-width: 3px;
+}
+
+@media only screen and (max-width: 900px) {
+    form .post-frame {
+        min-height: 200px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .drop-zone {
+        margin: 1rem;
+    }
+    .drop-zone-text {
+        font-size: 1rem;
+    }
+    .drop-zone-text i {
+        font-size: 2rem;
+    }
+    .formpage-title {
+        font-size: 1.4rem;
+    }
+}
+
+.notificationsZone {
+    position: fixed;
+    padding: 2px 7px;
+    left: 0;
+    bottom: 0;
+    width: auto;
+}
+
+/* error component */
+.notification {
+    background-color: #fff;
+    border-radius: 7px;
+    box-shadow: 0px 3px 4px 2px rgba(0, 0, 0, .30);
+    width: 275px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 7px 0px;
+    padding: 10px;
+}
+
+.notification-close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+.notification-close-btn:focus {
+    outline: none;
+}
+
+.notification-icon {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.notification-icon i {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.notification-message {
+    width: 80%;
+    height: 100%;
+}
+.notification-message-text {
+    padding: 5px 7px 7px 7px;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+}
