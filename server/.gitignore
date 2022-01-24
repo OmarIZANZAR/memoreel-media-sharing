@@ -1,6 +1,4 @@
 /node_modules
 package-lock.json
 
-prod.env
-dev.env
 .env
