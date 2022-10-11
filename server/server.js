@@ -3,9 +3,9 @@ const cors = require('cors')
 const ConnectDB = require("./config/db.js")
 
 // SETTING ENV VARIABLES: 
-if( process.env.NODE_ENV !== "production" ) {
+if( process.env.NODE_ENV == "development" ) {
     require('colors')
-    require('dotenv').config({ path: './config/dev.env' })
+    require('dotenv').config({ path: './config/.env.development' })
 }
 
 // SERVER AND DATABASE LAUNCH:
@@ -26,9 +26,9 @@ app.use('/posts', PostsRouter)
 // REDIRECT TO FRONTEND IF PATH IS NOT POSTS:
 app.get('*', (req, res)=>{
     if( process.env.NODE_ENV === "production" ) {
-        res.redirect('https://memoreel.netlify.app/')
+        res.redirect(process.env.CLIENT_URL)
     } else {
-        res.redirect('http://localhost:3000/')
+        res.redirect('http://localhost:3000')
     }
 })
 
